@@ -2,13 +2,13 @@
 
 Machetes de referencia sobre bases de datos relacionales y SQL.
 
-- [ ] CRUD
-- [ ] Normalización (1NF-5NF)
-- [ ] ACID / transacciones / isolation levels
-- [ ] Índices
-- [ ] Locks (shared/exclusive/MVCC)
-- [ ] Rollback / savepoints
-- [ ] Stored procedures vs funciones
-- [ ] Queries non-sargable
-- [ ] Sharding vs partitioning
-- [ ] NoSQL
+- [x] [CRUD](crud.md)
+- [x] [Normalización (1NF-5NF)](normalizacion.md)
+- [x] [ACID / transacciones / isolation levels](acid-transacciones-isolation.md)
+- [x] [Índices](indices.md)
+- [x] [Locks (shared/exclusive/MVCC)](locks.md)
+- [x] [Rollback / savepoints](rollback-savepoints.md)
+- [x] [Stored procedures vs funciones](stored-procedures-vs-funciones.md)
+- [x] [Queries non-sargable](queries-non-sargable.md)
+- [x] [Sharding vs partitioning](sharding-vs-partitioning.md)
+- [x] [NoSQL](nosql.md)
