@@ -8,4 +8,4 @@ Machetes sobre diseño de sistemas y arquitectura backend.
 - [ ] Load balancers (L4/L7, algoritmos, ALB/NLB, Nginx, HAProxy, Traefik, Envoy, K8s Ingress)
 - [ ] Arquitectura Kafka
 - [ ] Cache invalidation
-- [ ] Qué pasa cuando escribís una URL
+- [x] [Qué pasa cuando escribís una URL](que-pasa-cuando-escribis-una-url.md)
