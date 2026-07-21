@@ -6,3 +6,4 @@ Machetes sobre el ecosistema y setup de Python.
 - [x] [Setup en macOS con uv](setup-uv.md)
 - [x] [Sintaxis general](sintaxis.md)
 - [x] [Endpoints para microservicios (FastAPI)](endpoints-microservicios.md)
+- [x] [Sync vs Async en FastAPI](sync-vs-async-fastapi.md)
