@@ -12,3 +12,4 @@ Machetes sobre diseño de sistemas y arquitectura backend.
 - [ ] Arquitectura Kafka
 - [ ] Cache invalidation
 - [x] [Qué pasa cuando escribís una URL](que-pasa-cuando-escribis-una-url.md)
+- [x] [Autenticación y Seguridad — conceptos generales](autenticacion.md)
