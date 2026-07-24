@@ -2,159 +2,159 @@
 
 ### A
 
-- **Abstract Factory** — [Patrones creacionales](system-design/patrones-creacionales.md)
-- **ACID** — [ACID / transacciones / isolation levels](sql/acid-transacciones-isolation.md)
-- **Adapter (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md)
-- **Anomalías (inserción/actualización/borrado)** — [Normalización](sql/normalizacion.md)
-- **Autenticación vs Autorización** — [Autenticación y Seguridad](system-design/autenticacion.md)
+- **Abstract Factory** — [Patrones creacionales](system-design/patrones-creacionales.md#abstract-factory)
+- **ACID** — [ACID / transacciones / isolation levels](sql/acid-transacciones-isolation.md#acid)
+- **Adapter (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#adapter)
+- **Anomalías (inserción/actualización/borrado)** — [Normalización](sql/normalizacion.md#las-tres-anomalías-que-la-normalización-evita)
+- **Autenticación vs Autorización** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
 
 ### B
 
-- **Backfill** — [Migraciones de base de datos](sql/migraciones.md)
-- **B-tree** — [Índices](sql/indices.md)
-- **BCNF (Boyce-Codd)** — [Normalización](sql/normalizacion.md)
-- **Bloqueo del hilo principal** — [Diagnóstico Frontend](diagnostico/frontend.md)
-- **Builder (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md)
+- **Backfill** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
+- **B-tree** — [Índices](sql/indices.md#tipos-más-comunes)
+- **BCNF (Boyce-Codd)** — [Normalización](sql/normalizacion.md#bcnf--boyce-codd-35nf)
+- **Bloqueo del hilo principal** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
+- **Builder (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md#builder)
 
 ### C
 
-- **Cache-aside pattern** — [Diagnóstico Backend](diagnostico/backend.md)
-- **CAP Theorem** — [NoSQL](sql/nosql.md)
-- **Chain of Responsibility (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md)
-- **Circuit breaker** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Clustered index vs Non-clustered index** — [Índices](sql/indices.md)
-- **Clustering (multi-proceso)** — [Diagnóstico Backend](diagnostico/backend.md)
-- **Column-family store** — [NoSQL](sql/nosql.md)
-- **Command (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md)
-- **Connection pooling** — [Diagnóstico Backend](diagnostico/backend.md)
-- **Consistencia** — [ACID](sql/acid-transacciones-isolation.md) / [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Consistencia eventual** — [NoSQL](sql/nosql.md)
-- **Consistent hashing** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md)
-- **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Covering index** — [Índices](sql/indices.md)
+- **Cache-aside pattern** — [Diagnóstico Backend](diagnostico/backend.md#falta-de-cache)
+- **CAP Theorem** — [NoSQL](sql/nosql.md#cap-theorem)
+- **Chain of Responsibility (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#chain-of-responsibility)
+- **Circuit breaker** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
+- **Clustered index vs Non-clustered index** — [Índices](sql/indices.md#clustered-vs-non-clustered)
+- **Clustering (multi-proceso)** — [Diagnóstico Backend](diagnostico/backend.md#clustering)
+- **Column-family store** — [NoSQL](sql/nosql.md#categorías-principales)
+- **Command (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#command)
+- **Connection pooling** — [Diagnóstico Backend](diagnostico/backend.md#conexiones-mal-gestionadas)
+- **Consistencia** — [ACID](sql/acid-transacciones-isolation.md#acid) · [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#consistencia)
+- **Consistencia eventual** — [NoSQL](sql/nosql.md#consistencia-eventual)
+- **Consistent hashing** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
+- **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
+- **Covering index** — [Índices](sql/indices.md#covering-index)
 - **CRUD** — [CRUD](sql/crud.md)
-- **CSSOM** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md)
+- **CSSOM** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
 
 ### D
 
-- **Deadlock** — [Locks](sql/locks.md)
-- **Debounce / Throttle** — [Diagnóstico Frontend](diagnostico/frontend.md)
-- **Decorator (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md)
-- **Denormalización** — [Normalización](sql/normalizacion.md)
-- **Dependency Inversion Principle (D de SOLID)** — [SOLID principles](system-design/solid.md)
-- **Dirty read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md)
-- **Disponibilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **DNS (Domain Name System)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md)
-- **DOM (Document Object Model)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md)
-- **Document store** — [NoSQL](sql/nosql.md)
-- **Dual write** — [Migraciones de base de datos](sql/migraciones.md)
+- **Deadlock** — [Locks](sql/locks.md#deadlocks)
+- **Debounce / Throttle** — [Diagnóstico Frontend](diagnostico/frontend.md#manejo-incorrecto-de-eventos)
+- **Decorator (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#decorator)
+- **Denormalización** — [Normalización](sql/normalizacion.md#denormalización-el-trade-off)
+- **Dependency Inversion Principle (D de SOLID)** — [SOLID principles](system-design/solid.md#d--dependency-inversion-principle)
+- **Dirty read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
+- **Disponibilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
+- **DNS (Domain Name System)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#2-resolución-dns--de-dominio-a-ip)
+- **DOM (Document Object Model)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
+- **Document store** — [NoSQL](sql/nosql.md#categorías-principales)
+- **Dual write** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 
 ### E
 
-- **Elasticidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Estadísticas del planner** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md)
-- **Execution plan** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md)
-- **Exclusive lock** — [Locks](sql/locks.md)
-- **Expand/contract pattern** — [Migraciones de base de datos](sql/migraciones.md)
+- **Elasticidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
+- **Estadísticas del planner** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#estadísticas-del-planner)
+- **Execution plan** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#execution-plan)
+- **Exclusive lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
+- **Expand/contract pattern** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 
 ### F
 
-- **Facade (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md)
-- **Factory Method** — [Patrones creacionales](system-design/patrones-creacionales.md)
-- **Forward-only migration** — [Migraciones de base de datos](sql/migraciones.md)
+- **Facade (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#facade)
+- **Factory Method** — [Patrones creacionales](system-design/patrones-creacionales.md#factory-method)
+- **Forward-only migration** — [Migraciones de base de datos](sql/migraciones.md#2-forward-only-vs-reversible)
 
 ### G
 
-- **Graph database** — [NoSQL](sql/nosql.md)
+- **Graph database** — [NoSQL](sql/nosql.md#categorías-principales)
 
 ### H
 
-- **Hashing vs Encriptado vs Encoding** — [Autenticación y Seguridad](system-design/autenticacion.md)
-- **HPA (Horizontal Pod Autoscaler)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **HTTP chaining** — [Diagnóstico Backend](diagnostico/backend.md)
+- **Hashing vs Encriptado vs Encoding** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
+- **HPA (Horizontal Pod Autoscaler)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
+- **HTTP chaining** — [Diagnóstico Backend](diagnostico/backend.md#http-chaining)
 
 ### I
 
-- **Idempotencia** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
+- **Idempotencia** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#idempotencia)
 - **Índice** — [Índices](sql/indices.md)
-- **Índice compuesto** — [Índices](sql/indices.md)
-- **Índice parcial** — [Índices](sql/indices.md)
-- **Inmutabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Interface Segregation Principle (I de SOLID)** — [SOLID principles](system-design/solid.md)
-- **Isolation levels** — [ACID / isolation levels](sql/acid-transacciones-isolation.md)
+- **Índice compuesto** — [Índices](sql/indices.md#índices-compuestos)
+- **Índice parcial** — [Índices](sql/indices.md#índice-parcial-postgres)
+- **Inmutabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#inmutabilidad)
+- **Interface Segregation Principle (I de SOLID)** — [SOLID principles](system-design/solid.md#i--interface-segregation-principle)
+- **Isolation levels** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#isolation-levels-sql-standard)
 
 ### J
 
-- **JWT** — [Autenticación y Seguridad](system-design/autenticacion.md)
+- **JWT** — [Autenticación y Seguridad](system-design/autenticacion.md#5-jwt--estructura-y-stateless)
 
 ### K
 
-- **Key-Value store** — [NoSQL](sql/nosql.md)
+- **Key-Value store** — [NoSQL](sql/nosql.md#categorías-principales)
 
 ### L
 
-- **Liskov Substitution Principle (L de SOLID)** — [SOLID principles](system-design/solid.md)
+- **Liskov Substitution Principle (L de SOLID)** — [SOLID principles](system-design/solid.md#l--liskov-substitution-principle)
 
 ### M
 
-- **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md)
-- **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md)
+- **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md#1-versionado-de-schema)
+- **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md#mvcc-multi-version-concurrency-control)
 
 ### N
 
-- **N+1 (problema)** — [Diagnóstico Backend](diagnostico/backend.md)
-- **Non-repeatable read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md)
+- **N+1 (problema)** — [Diagnóstico Backend](diagnostico/backend.md#problema-n1)
+- **Non-repeatable read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
 - **Normalización** — [Normalización](sql/normalizacion.md)
 - **NoSQL** — [NoSQL](sql/nosql.md)
 
 ### O
 
-- **Observabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Observer (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md)
-- **OLAP vs OLTP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md)
-- **Open/Closed Principle (O de SOLID)** — [SOLID principles](system-design/solid.md)
-- **Optimistic locking** — [Locks](sql/locks.md)
+- **Observabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
+- **Observer (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#observer)
+- **OLAP vs OLTP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
+- **Open/Closed Principle (O de SOLID)** — [SOLID principles](system-design/solid.md#o--openclosed-principle)
+- **Optimistic locking** — [Locks](sql/locks.md#pessimistic-vs-optimistic-locking)
 
 ### P
 
-- **Partition pruning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md)
-- **Partitioning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md)
-- **Pessimistic locking** — [Locks](sql/locks.md)
-- **Phantom read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md)
-- **Proxy (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md)
+- **Partition pruning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#partitioning)
+- **Partitioning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#partitioning)
+- **Pessimistic locking** — [Locks](sql/locks.md#pessimistic-vs-optimistic-locking)
+- **Phantom read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
+- **Proxy (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#proxy)
 
 ### R
 
-- **Range partitioning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md)
-- **Readiness probe** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
-- **Refresh token vs Access token** — [Autenticación y Seguridad](system-design/autenticacion.md)
-- **Render tree** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md)
-- **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md)
+- **Range partitioning** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#range-partitioning)
+- **Readiness probe** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
+- **Refresh token vs Access token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)
+- **Render tree** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
+- **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md#rollback)
 
 ### S
 
-- **Salt** — [Autenticación y Seguridad](system-design/autenticacion.md)
+- **Salt** — [Autenticación y Seguridad](system-design/autenticacion.md#3-salt)
 - **SARGable** — [Queries non-sargable](sql/queries-non-sargable.md)
-- **Savepoint** — [Rollback / savepoints](sql/rollback-savepoints.md)
-- **Sharding** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md)
-- **Shared lock** — [Locks](sql/locks.md)
-- **Single Responsibility Principle (S de SOLID)** — [SOLID principles](system-design/solid.md)
-- **Singleton (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md)
+- **Savepoint** — [Rollback / savepoints](sql/rollback-savepoints.md#savepoints)
+- **Sharding** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
+- **Shared lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
+- **Single Responsibility Principle (S de SOLID)** — [SOLID principles](system-design/solid.md#s--single-responsibility-principle)
+- **Singleton (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md#singleton)
 - **SOLID** — [SOLID principles](system-design/solid.md)
 - **Stored Procedure vs Función** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
-- **Strategy (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md)
+- **Strategy (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#strategy)
 
 ### T
 
-- **TCP handshake (three-way handshake)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md)
-- **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md)
-- **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md)
+- **TCP handshake (three-way handshake)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#3-conexión-tcp--three-way-handshake)
+- **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#4-tls-handshake-si-es-https)
+- **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
 
 ### V
 
-- **Virtualización / Windowing** — [Diagnóstico Frontend](diagnostico/frontend.md)
-- **Vistas materializadas** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md)
+- **Virtualización / Windowing** — [Diagnóstico Frontend](diagnostico/frontend.md#falta-de-paginación--virtualización)
+- **Vistas materializadas** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#vistas-materializadas)
 
 ### W
 
-- **Web Worker** — [Diagnóstico Frontend](diagnostico/frontend.md)
+- **Web Worker** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
