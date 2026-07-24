@@ -12,3 +12,4 @@ Machetes de referencia sobre bases de datos relacionales y SQL.
 - [x] [Queries non-sargable](queries-non-sargable.md)
 - [x] [Sharding vs partitioning](sharding-vs-partitioning.md)
 - [x] [NoSQL](nosql.md)
+- [x] [Migraciones de base de datos](migraciones.md)
