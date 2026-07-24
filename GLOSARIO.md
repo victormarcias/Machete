@@ -1,5 +1,9 @@
 # Glosario
 
+## Índice
+
+[A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#g) · [H](#h) · [I](#i) · [J](#j) · [K](#k) · [L](#l) · [M](#m) · [N](#n) · [O](#o) · [P](#p) · [R](#r) · [S](#s) · [T](#t) · [V](#v) · [W](#w)
+
 ### A
 
 - **Abstract Factory** — [Patrones creacionales](system-design/patrones-creacionales.md#abstract-factory)
@@ -10,8 +14,8 @@
 
 ### B
 
-- **Backfill** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 - **B-tree** — [Índices](sql/indices.md#tipos-más-comunes)
+- **Backfill** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 - **BCNF (Boyce-Codd)** — [Normalización](sql/normalizacion.md#bcnf--boyce-codd-35nf)
 - **Bloqueo del hilo principal** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
 - **Builder (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md#builder)
@@ -45,16 +49,16 @@
 - **Dirty read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
 - **Disponibilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
 - **DNS (Domain Name System)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#2-resolución-dns--de-dominio-a-ip)
-- **DOM (Document Object Model)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
 - **Document store** — [NoSQL](sql/nosql.md#categorías-principales)
+- **DOM (Document Object Model)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
 - **Dual write** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 
 ### E
 
 - **Elasticidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
 - **Estadísticas del planner** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#estadísticas-del-planner)
-- **Execution plan** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#execution-plan)
 - **Exclusive lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
+- **Execution plan** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#execution-plan)
 - **Expand/contract pattern** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 
 ### F

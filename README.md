@@ -11,4 +11,6 @@ Este repositorio contiene conocimiento general de informática.
 - [⚛️ Frontend React](frontend-react/) — hooks, eventos DOM, performance, SSR
 - [🐍 Python](python/) — setup, sintaxis, FastAPI
 
-📖 [Glosario](GLOSARIO.md) — todos los términos técnicos, ordenados alfabéticamente
+## Glosario
+
+- [📖 Glosario](GLOSARIO.md) — todos los términos técnicos, ordenados alfabéticamente
