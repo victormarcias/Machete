@@ -10,3 +10,5 @@ Este repositorio contiene conocimiento general de informática.
 - [⚙️ DevOps](devops/) — escalabilidad, Kubernetes, CDN, cold starts
 - [⚛️ Frontend React](frontend-react/) — hooks, eventos DOM, performance, SSR
 - [🐍 Python](python/) — setup, sintaxis, FastAPI
+
+📖 [Glosario](GLOSARIO.md) — todos los términos técnicos, ordenados alfabéticamente

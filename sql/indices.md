@@ -62,6 +62,6 @@ CREATE INDEX idx_active_users ON users(email) WHERE active = true;
 EXPLAIN ANALYZE SELECT * FROM users WHERE email = 'x@mail.com';
 ```
 
-Buscar `Index Scan` / `Index Only Scan` en el plan (vs `Seq Scan`). Ver [db-diagnostico](../db-diagnostico/README.md) para el detalle de `EXPLAIN ANALYZE`.
+Buscar `Index Scan` / `Index Only Scan` en el plan (vs `Seq Scan`). Ver [Diagnóstico Base de Datos](../diagnostico/base-de-datos.md) para el detalle de `EXPLAIN ANALYZE`.
 
 Relacionado: [Queries non-sargable](queries-non-sargable.md) — patrones de queries que impiden que el motor use el índice aunque exista.
