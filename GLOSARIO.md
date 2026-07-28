@@ -7,10 +7,12 @@
 ### A
 
 - **Abstract Factory** — [Patrones creacionales](system-design/patrones-creacionales.md#abstract-factory)
+- **Access token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)
 - **ACID** — [ACID / transacciones / isolation levels](sql/acid-transacciones-isolation.md#acid)
 - **Adapter (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#adapter)
 - **Anomalías (inserción/actualización/borrado)** — [Normalización](sql/normalizacion.md#las-tres-anomalías-que-la-normalización-evita)
-- **Autenticación vs Autorización** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
+- **Autenticación** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
+- **Autorización** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
 
 ### B
 
@@ -26,7 +28,7 @@
 - **CAP Theorem** — [NoSQL](sql/nosql.md#cap-theorem)
 - **Chain of Responsibility (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#chain-of-responsibility)
 - **Circuit breaker** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
-- **Clustered index vs Non-clustered index** — [Índices](sql/indices.md#clustered-vs-non-clustered)
+- **Clustered index** — [Índices](sql/indices.md#clustered-vs-non-clustered)
 - **Clustering (multi-proceso)** — [Diagnóstico Backend](diagnostico/backend.md#clustering)
 - **Column-family store** — [NoSQL](sql/nosql.md#categorías-principales)
 - **Command (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#command)
@@ -44,6 +46,7 @@
 - **Deadlock** — [Locks](sql/locks.md#deadlocks)
 - **Debounce / Throttle** — [Diagnóstico Frontend](diagnostico/frontend.md#manejo-incorrecto-de-eventos)
 - **Decorator (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#decorator)
+- **Deep copy** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#shallow-copy-vs-deep-copy)
 - **Denormalización** — [Normalización](sql/normalizacion.md#denormalización-el-trade-off)
 - **Dependency Inversion Principle (D de SOLID)** — [SOLID principles](system-design/solid.md#d--dependency-inversion-principle)
 - **Dirty read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
@@ -56,6 +59,8 @@
 ### E
 
 - **Elasticidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
+- **Encoding** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
+- **Encriptado** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
 - **Estadísticas del planner** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#estadísticas-del-planner)
 - **Exclusive lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
 - **Execution plan** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#execution-plan)
@@ -66,6 +71,7 @@
 - **Facade (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#facade)
 - **Factory Method** — [Patrones creacionales](system-design/patrones-creacionales.md#factory-method)
 - **Forward-only migration** — [Migraciones de base de datos](sql/migraciones.md#2-forward-only-vs-reversible)
+- **Función almacenada** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 
 ### G
 
@@ -73,7 +79,7 @@
 
 ### H
 
-- **Hashing vs Encriptado vs Encoding** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
+- **Hashing** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
 - **HPA (Horizontal Pod Autoscaler)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
 - **HTTP chaining** — [Diagnóstico Backend](diagnostico/backend.md#http-chaining)
 
@@ -108,6 +114,7 @@
 ### N
 
 - **N+1 (problema)** — [Diagnóstico Backend](diagnostico/backend.md#problema-n1)
+- **Non-clustered index** — [Índices](sql/indices.md#clustered-vs-non-clustered)
 - **Non-repeatable read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
 - **Normalización** — [Normalización](sql/normalizacion.md)
 - **NoSQL** — [NoSQL](sql/nosql.md)
@@ -116,7 +123,8 @@
 
 - **Observabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Observer (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#observer)
-- **OLAP vs OLTP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
+- **OLAP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
+- **OLTP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
 - **Open/Closed Principle (O de SOLID)** — [SOLID principles](system-design/solid.md#o--openclosed-principle)
 - **Optimistic locking** — [Locks](sql/locks.md#pessimistic-vs-optimistic-locking)
 
@@ -132,7 +140,7 @@
 
 - **Range partitioning** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#range-partitioning)
 - **Readiness probe** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
-- **Refresh token vs Access token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)
+- **Refresh token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)
 - **Render tree** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
 - **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md#rollback)
 
@@ -141,12 +149,13 @@
 - **Salt** — [Autenticación y Seguridad](system-design/autenticacion.md#3-salt)
 - **SARGable** — [Queries non-sargable](sql/queries-non-sargable.md)
 - **Savepoint** — [Rollback / savepoints](sql/rollback-savepoints.md#savepoints)
+- **Shallow copy** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#shallow-copy-vs-deep-copy)
 - **Sharding** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
 - **Shared lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
 - **Single Responsibility Principle (S de SOLID)** — [SOLID principles](system-design/solid.md#s--single-responsibility-principle)
 - **Singleton (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md#singleton)
 - **SOLID** — [SOLID principles](system-design/solid.md)
-- **Stored Procedure vs Función** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
+- **Stored Procedure** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 - **Strategy (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#strategy)
 - **Stub** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
 

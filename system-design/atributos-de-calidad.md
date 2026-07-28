@@ -50,6 +50,36 @@ user.age = 31; // no dispara re-render
 setUser({ ...user, age: 31 });
 ```
 
+### Shallow copy vs Deep copy
+
+El spread (`{...obj}`), `Object.assign`, `dict.copy()` o `dataclasses.replace` de los ejemplos de arriba solo copian el **primer nivel**. Cualquier objeto o array anidado adentro sigue siendo la **misma referencia** que en el original — mutar ese nivel interno rompe la garantía de inmutabilidad sin que se note, porque el nivel superior sí parece "nuevo".
+
+```python
+import copy
+
+original = {"user": {"name": "Ana"}, "count": 1}
+
+shallow = original.copy()          # o dict(original), o {**original}
+shallow["count"] = 2                # ✅ no afecta a original — el nivel superior sí se copió
+shallow["user"]["name"] = "Beto"     # ❌ esto SÍ modifica original["user"]["name"] — misma referencia anidada
+
+deep = copy.deepcopy(original)
+deep["user"]["name"] = "Carla"        # ✅ ahora no toca el original en ningún nivel
+```
+
+```ts
+const original = { user: { name: 'Ana' }, count: 1 };
+
+const shallow = { ...original };
+shallow.count = 2;              // ✅ no afecta a original
+shallow.user.name = 'Beto';      // ❌ sí afecta a original.user.name — misma referencia anidada
+
+const deep = structuredClone(original); // copia profunda nativa (o JSON.parse(JSON.stringify(x)) como alternativa vieja)
+deep.user.name = 'Carla';         // ✅ no toca el original en ningún nivel
+```
+
+Por eso `setUser({ ...user, age: 31 })` de arriba es seguro — `age` es un valor primitivo, no un objeto anidado. Si `user` tuviera `address: { city: 'BA' }`, ese mismo spread superficial no alcanzaría para modificar `city` sin mutar el original: haría falta `{ ...user, address: { ...user.address, city: 'Rosario' } }` (o una librería de manejo de estado inmutable) para sostener la garantía en niveles más profundos.
+
 ## Disponibilidad
 
 Proporción del tiempo que el sistema responde correctamente. Se mide en "nueves" (99.9% ≈ 8.7 horas de downtime al año, 99.99% ≈ 52 minutos). Se logra con redundancia: más de una instancia corriendo, en más de una zona de disponibilidad, con un load balancer que deja de mandar tráfico a la que falla.
