@@ -102,6 +102,7 @@
 ### M
 
 - **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md#1-versionado-de-schema)
+- **Mock** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
 - **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md#mvcc-multi-version-concurrency-control)
 
 ### N
@@ -147,12 +148,16 @@
 - **SOLID** — [SOLID principles](system-design/solid.md)
 - **Stored Procedure vs Función** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 - **Strategy (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#strategy)
+- **Stub** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
 
 ### T
 
 - **TCP handshake (three-way handshake)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#3-conexión-tcp--three-way-handshake)
+- **Test doubles (Mock/Stub/Fake/Spy)** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
+- **Test pyramid** — [Testing — conceptos generales](system-design/testing.md#1-test-pyramid)
 - **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#4-tls-handshake-si-es-https)
 - **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
+- **Transactional rollback pattern** — [Testing — conceptos generales](system-design/testing.md#5-transactional-rollback-pattern-para-tests-de-db)
 
 ### V
 

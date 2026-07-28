@@ -13,3 +13,4 @@ Machetes sobre diseño de sistemas y arquitectura backend.
 - [ ] Cache invalidation
 - [x] [Qué pasa cuando escribís una URL](que-pasa-cuando-escribis-una-url.md)
 - [x] [Autenticación y Seguridad — conceptos generales](autenticacion.md)
+- [x] [Testing — conceptos generales](testing.md)
