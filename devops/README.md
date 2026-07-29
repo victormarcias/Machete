@@ -7,3 +7,4 @@ Machetes sobre infraestructura, escalabilidad y operaciones.
 - [ ] CDN
 - [ ] Cold starts
 - [ ] Diagnóstico de performance por capa
+- [x] [Deploy de FastAPI a un VPS (SSH hardening, firewall, Nginx reverse proxy, Let's Encrypt, systemd)](deploy-vps.md)
