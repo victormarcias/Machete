@@ -97,4 +97,4 @@ sudo systemctl status miapp
 ```
 
 ---
-Relacionado: [Sync vs Async en FastAPI](../python/sync-vs-async-fastapi.md), [Escalabilidad vertical vs horizontal](README.md).
+Relacionado: [Sync vs Async en FastAPI](../python/sync-vs-async-fastapi.md), [Escalabilidad vertical vs horizontal](README.md), [VPS vs Cloud Run](vps-vs-cloud-run.md).
