@@ -26,10 +26,12 @@
 
 - **Cache-aside pattern** — [Diagnóstico Backend](diagnostico/backend.md#falta-de-cache)
 - **CAP Theorem** — [NoSQL](sql/nosql.md#cap-theorem)
+- **CDN (Content Delivery Network)** — [CDN](devops/cdn.md)
 - **Chain of Responsibility (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#chain-of-responsibility)
 - **Circuit breaker** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
 - **Clustered index** — [Índices](sql/indices.md#clustered-vs-non-clustered)
 - **Clustering (multi-proceso)** — [Diagnóstico Backend](diagnostico/backend.md#clustering)
+- **Cold start** — [Cold starts](devops/cold-starts.md)
 - **Column-family store** — [NoSQL](sql/nosql.md#categorías-principales)
 - **Command (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#command)
 - **Connection pooling** — [Diagnóstico Backend](diagnostico/backend.md#conexiones-mal-gestionadas)
@@ -145,6 +147,7 @@
 - **Readiness probe** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
 - **Refresh token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)
 - **Render tree** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
+- **Resource limits (requests vs limits)** — [Kubernetes](devops/kubernetes.md#resource-limits)
 - **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md#rollback)
 
 ### S

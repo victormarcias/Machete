@@ -4,10 +4,10 @@ Machetes sobre React y frontend moderno.
 
 - [ ] Eventos DOM
 - [ ] Hooks
-- [ ] WebSocket / SSE / streaming
-- [ ] Patrón Observer
-- [ ] Object Pooling
-- [ ] Performance diagnostics (Profiler, Lighthouse, bundle-analyzer)
-- [ ] Tree shaking
-- [ ] SSR
 - [ ] Module federation
+- [ ] Object Pooling
+- [ ] Patrón Observer
+- [ ] Performance diagnostics
+- [ ] SSR
+- [ ] Tree shaking
+- [ ] WebSocket / SSE / streaming

@@ -2,12 +2,12 @@
 
 Machetes sobre infraestructura, escalabilidad y operaciones.
 
-- [ ] Escalabilidad vertical vs horizontal
-- [ ] Kubernetes (readiness probes, HPA, resource limits)
-- [ ] CDN
-- [ ] Cold starts
-- [ ] Diagnóstico de performance por capa
-- [x] [Deploy de FastAPI a un VPS (SSH hardening, firewall, Nginx reverse proxy, Let's Encrypt, systemd)](deploy-vps.md)
-- [x] [Dockerización de una app FastAPI (multi-stage build, .dockerignore)](docker.md)
-- [x] [Deploy a Cloud Run (contenedores serverless, Neon, dominio + HTTPS, security headers)](deploy-cloud-run.md)
-- [x] [VPS vs Cloud Run (comparación y pros/contras)](vps-vs-cloud-run.md)
+- [x] [CDN](cdn.md)
+- [x] [Cold starts](cold-starts.md)
+- [x] [Deploy a Cloud Run](deploy-cloud-run.md)
+- [x] [Deploy de FastAPI a un VPS](deploy-vps.md)
+- [x] [Diagnóstico de performance por capa](../diagnostico/README.md)
+- [x] [Dockerización de una app FastAPI](docker.md)
+- [x] [Escalabilidad vertical vs horizontal](escalabilidad-vertical-horizontal.md)
+- [x] [Kubernetes](kubernetes.md)
+- [x] [VPS vs Cloud Run](vps-vs-cloud-run.md)
