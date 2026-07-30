@@ -8,3 +8,5 @@ Machetes sobre infraestructura, escalabilidad y operaciones.
 - [ ] Cold starts
 - [ ] Diagnóstico de performance por capa
 - [x] [Deploy de FastAPI a un VPS (SSH hardening, firewall, Nginx reverse proxy, Let's Encrypt, systemd)](deploy-vps.md)
+- [x] [Dockerización de una app FastAPI (multi-stage build, .dockerignore)](docker.md)
+- [x] [Deploy a Cloud Run (contenedores serverless, Neon, dominio + HTTPS, security headers)](deploy-cloud-run.md)

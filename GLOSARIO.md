@@ -36,6 +36,7 @@
 - **Consistencia** — [ACID](sql/acid-transacciones-isolation.md#acid) · [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#consistencia)
 - **Consistencia eventual** — [NoSQL](sql/nosql.md#consistencia-eventual)
 - **Consistent hashing** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
+- **Contenedorización** — [Dockerización de una app FastAPI](devops/docker.md#1-por-qué-contenedorizar)
 - **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Covering index** — [Índices](sql/indices.md#covering-index)
 - **CRUD** — [CRUD](sql/crud.md)
@@ -61,6 +62,7 @@
 - **Elasticidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
 - **Encoding** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
 - **Encriptado** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
+- **Escala a cero (scale-to-zero)** — [Deploy a Cloud Run](devops/deploy-cloud-run.md#1-qué-es-un-contenedor-serverless-y-qué-significa-escala-a-cero)
 - **Estadísticas del planner** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#estadísticas-del-planner)
 - **Exclusive lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
 - **Execution plan** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#execution-plan)
@@ -109,6 +111,7 @@
 
 - **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md#1-versionado-de-schema)
 - **Mock** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
+- **Multi-stage build** — [Dockerización de una app FastAPI](devops/docker.md#2-multi-stage-build)
 - **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md#mvcc-multi-version-concurrency-control)
 
 ### N
@@ -149,6 +152,7 @@
 - **Salt** — [Autenticación y Seguridad](system-design/autenticacion.md#3-salt)
 - **SARGable** — [Queries non-sargable](sql/queries-non-sargable.md)
 - **Savepoint** — [Rollback / savepoints](sql/rollback-savepoints.md#savepoints)
+- **Security headers** — [Deploy a Cloud Run](devops/deploy-cloud-run.md#5-security-headers-vía-middleware)
 - **Shallow copy** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#shallow-copy-vs-deep-copy)
 - **Sharding** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
 - **Shared lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
