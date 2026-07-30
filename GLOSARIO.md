@@ -38,11 +38,11 @@
 - **Consistencia** — [ACID](sql/acid-transacciones-isolation.md#acid) · [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#consistencia)
 - **Consistencia eventual** — [NoSQL](sql/nosql.md#consistencia-eventual)
 - **Consistent hashing** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
-- **Contenedorización** — [Dockerización de una app FastAPI](devops/docker.md#1-por-qué-contenedorizar)
 - **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Covering index** — [Índices](sql/indices.md#covering-index)
 - **CRUD** — [CRUD](sql/crud.md)
 - **CSSOM** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
+- **Dockerización** — [Dockerización](devops/docker.md#1-por-qué-dockerizar)
 
 ### D
 
@@ -113,7 +113,7 @@
 
 - **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md#1-versionado-de-schema)
 - **Mock** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
-- **Multi-stage build** — [Dockerización de una app FastAPI](devops/docker.md#2-multi-stage-build)
+- **Multi-stage build** — [Dockerización](devops/docker.md#2-multi-stage-build)
 - **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md#mvcc-multi-version-concurrency-control)
 
 ### N

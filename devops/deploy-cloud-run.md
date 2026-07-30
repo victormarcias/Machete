@@ -1,6 +1,6 @@
 # Deploy a Cloud Run (contenedores serverless)
 
-Cómo llevar la imagen de [Dockerización de una app FastAPI](docker.md) a producción sin administrar un servidor propio. Alternativa a [Deploy a un VPS](deploy-vps.md) cuando no querés vos ser responsable de parchear el SO, renovar certificados a mano, ni pagar por una máquina prendida las 24hs aunque nadie la use.
+Cómo llevar la imagen de [Dockerización](docker.md) a producción sin administrar un servidor propio. Alternativa a [Deploy a un VPS](deploy-vps.md) cuando no querés vos ser responsable de parchear el SO, renovar certificados a mano, ni pagar por una máquina prendida las 24hs aunque nadie la use.
 
 ## 1. Qué es un contenedor serverless y qué significa "escala a cero"
 
@@ -63,4 +63,4 @@ app.add_middleware(SecurityHeadersMiddleware)
 ```
 
 ---
-Relacionado: [Dockerización de una app FastAPI](docker.md), [Deploy a un VPS](deploy-vps.md), [VPS vs Cloud Run](vps-vs-cloud-run.md), [Cold start](../diagnostico/devops.md), [Elasticidad](../system-design/atributos-de-calidad.md#elasticidad).
+Relacionado: [Dockerización](docker.md), [Deploy a un VPS](deploy-vps.md), [VPS vs Cloud Run](vps-vs-cloud-run.md), [Cold start](../diagnostico/devops.md), [Elasticidad](../system-design/atributos-de-calidad.md#elasticidad).
