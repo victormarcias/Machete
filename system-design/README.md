@@ -2,12 +2,12 @@
 
 Machetes sobre diseño de sistemas y arquitectura backend.
 
-- [ ] Arquitectura Kafka
+- [x] [Arquitectura Kafka](kafka.md)
 - [x] [Atributos de calidad de sistemas / "-ilities"](atributos-de-calidad.md)
 - [x] [Autenticación y Seguridad — conceptos generales](autenticacion.md)
-- [ ] Cache invalidation
-- [ ] Controller / Service / Repository
-- [ ] Load balancers
+- [x] [Cache invalidation](cache-invalidation.md)
+- [x] [Controller / Service / Repository](controller-service-repository.md)
+- [x] [Load balancers](load-balancers.md)
 - [x] [Patrones de diseño — Comportamiento](patrones-comportamiento.md)
 - [x] [Patrones de diseño — Creacionales](patrones-creacionales.md)
 - [x] [Patrones de diseño — Estructurales](patrones-estructurales.md)

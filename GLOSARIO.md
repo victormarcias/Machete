@@ -26,6 +26,7 @@
 
 ### C
 
+- **Cache stampede (thundering herd)** — [Cache Invalidation](system-design/cache-invalidation.md#cache-stampede-thundering-herd)
 - **Cache-aside pattern** — [Diagnóstico Backend](diagnostico/backend.md#falta-de-cache)
 - **CAP Theorem** — [NoSQL](sql/nosql.md#cap-theorem)
 - **Capturing (evento)** — [Eventos DOM](frontend-react/eventos-dom.md#bubbling-vs-capturing)
@@ -41,7 +42,9 @@
 - **Consistencia** — [ACID](sql/acid-transacciones-isolation.md#acid) · [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#consistencia)
 - **Consistencia eventual** — [NoSQL](sql/nosql.md#consistencia-eventual)
 - **Consistent hashing** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
+- **Consumer Group (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#producers--consumers-y-consumer-groups)
 - **Context manager (`with`, Python)** — [Sintaxis general](python/sintaxis.md#context-managers--with)
+- **Controller / Service / Repository** — [Controller / Service / Repository](system-design/controller-service-repository.md)
 - **Core Web Vitals (LCP, INP, CLS)** — [Performance Diagnostics](frontend-react/performance-diagnostics.md#lighthouse-genérico)
 - **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Covering index** — [Índices](sql/indices.md#covering-index)
@@ -121,6 +124,9 @@
 
 ### L
 
+- **L4 (transport layer)** — [Load Balancers](system-design/load-balancers.md#l4-vs-l7)
+- **L7 (application layer)** — [Load Balancers](system-design/load-balancers.md#l4-vs-l7)
+- **Least connections** — [Load Balancers](system-design/load-balancers.md#algoritmos-de-balanceo)
 - **Liskov Substitution Principle (L de SOLID)** — [SOLID principles](system-design/solid.md#l--liskov-substitution-principle)
 - **List comprehension (Python)** — [Sintaxis general](python/sintaxis.md#comprehensions)
 
@@ -150,6 +156,7 @@
 - **Object Pooling** — [Object Pooling](frontend-react/object-pooling.md)
 - **Observabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Observer (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#observer)
+- **Offset (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#offset)
 - **OLAP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
 - **OLTP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
 - **Open/Closed Principle (O de SOLID)** — [SOLID principles](system-design/solid.md#o--openclosed-principle)
@@ -157,6 +164,7 @@
 
 ### P
 
+- **Partición (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#topics-y-particiones)
 - **Partition pruning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#partitioning)
 - **Partitioning** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#partitioning)
 - **Pessimistic locking** — [Locks](sql/locks.md#pessimistic-vs-optimistic-locking)
@@ -175,6 +183,7 @@
 - **ResizeObserver (Browser API)** — [Patrón Observer en el browser](frontend-react/observer-en-el-browser.md#resizeobserver)
 - **Resource limits (requests vs limits, Kubernetes)** — [Kubernetes](devops/kubernetes.md#resource-limits)
 - **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md#rollback)
+- **Round robin** — [Load Balancers](system-design/load-balancers.md#algoritmos-de-balanceo)
 
 ### S
 
@@ -191,6 +200,7 @@
 - **SSE (Server-Sent Events)** — [WebSocket / SSE / Streaming](frontend-react/websocket-sse-streaming.md#sse-server-sent-events--unidireccional)
 - **SSG (Static Site Generation)** — [SSR](frontend-react/ssr.md#ssg-la-variante-prima)
 - **SSR (Server-Side Rendering)** — [SSR](frontend-react/ssr.md)
+- **Sticky sessions (IP hash)** — [Load Balancers](system-design/load-balancers.md#algoritmos-de-balanceo)
 - **Stored Procedure** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 - **Strategy (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#strategy)
 - **Stub** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
@@ -203,8 +213,10 @@
 - **TestClient (FastAPI)** — [Endpoints para microservicios](python/endpoints-microservicios.md#8-testing-de-endpoints-con-testclient)
 - **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#4-tls-handshake-si-es-https)
 - **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
+- **Topic (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#topics-y-particiones)
 - **Transactional rollback pattern** — [Testing — conceptos generales](system-design/testing.md#5-transactional-rollback-pattern-para-tests-de-db)
 - **Tree shaking** — [Tree Shaking](frontend-react/tree-shaking.md)
+- **TTL (Time To Live)** — [Cache Invalidation](system-design/cache-invalidation.md#ttl-vs-invalidación-explícita)
 
 ### U
 
@@ -221,3 +233,5 @@
 
 - **Web Worker (Browser API)** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
 - **WebSocket** — [WebSocket / SSE / Streaming](frontend-react/websocket-sse-streaming.md#websocket--bidireccional)
+- **Write-behind (write-back)** — [Cache Invalidation](system-design/cache-invalidation.md#cache-aside-write-through-write-behind)
+- **Write-through** — [Cache Invalidation](system-design/cache-invalidation.md#cache-aside-write-through-write-behind)
