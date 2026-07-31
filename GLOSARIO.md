@@ -2,7 +2,7 @@
 
 ## Índice
 
-[A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#g) · [H](#h) · [I](#i) · [J](#j) · [K](#k) · [L](#l) · [M](#m) · [N](#n) · [O](#o) · [P](#p) · [R](#r) · [S](#s) · [T](#t) · [V](#v) · [W](#w)
+[A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#g) · [H](#h) · [I](#i) · [J](#j) · [K](#k) · [L](#l) · [M](#m) · [N](#n) · [O](#o) · [P](#p) · [R](#r) · [S](#s) · [T](#t) · [U](#u) · [V](#v) · [W](#w)
 
 ### A
 
@@ -11,6 +11,7 @@
 - **ACID** — [ACID / transacciones / isolation levels](sql/acid-transacciones-isolation.md#acid)
 - **Adapter (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#adapter)
 - **Anomalías (inserción/actualización/borrado)** — [Normalización](sql/normalizacion.md#las-tres-anomalías-que-la-normalización-evita)
+- **Argon2** — [Autenticación en FastAPI](python/autenticacion-fastapi.md#1-hashing-de-passwords-con-argon2-passlib)
 - **Autenticación** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
 - **Autorización** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
 
@@ -20,12 +21,14 @@
 - **Backfill** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 - **BCNF (Boyce-Codd)** — [Normalización](sql/normalizacion.md#bcnf--boyce-codd-35nf)
 - **Bloqueo del hilo principal** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
+- **Bubbling (evento)** — [Eventos DOM](frontend-react/eventos-dom.md#bubbling-vs-capturing)
 - **Builder (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md#builder)
 
 ### C
 
 - **Cache-aside pattern** — [Diagnóstico Backend](diagnostico/backend.md#falta-de-cache)
 - **CAP Theorem** — [NoSQL](sql/nosql.md#cap-theorem)
+- **Capturing (evento)** — [Eventos DOM](frontend-react/eventos-dom.md#bubbling-vs-capturing)
 - **CDN (Content Delivery Network)** — [CDN](devops/cdn.md)
 - **Chain of Responsibility (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#chain-of-responsibility)
 - **Circuit breaker** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
@@ -38,10 +41,14 @@
 - **Consistencia** — [ACID](sql/acid-transacciones-isolation.md#acid) · [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#consistencia)
 - **Consistencia eventual** — [NoSQL](sql/nosql.md#consistencia-eventual)
 - **Consistent hashing** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
+- **Context manager (`with`, Python)** — [Sintaxis general](python/sintaxis.md#context-managers--with)
+- **Core Web Vitals (LCP, INP, CLS)** — [Performance Diagnostics](frontend-react/performance-diagnostics.md#lighthouse-genérico)
 - **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Covering index** — [Índices](sql/indices.md#covering-index)
 - **CRUD** — [CRUD](sql/crud.md)
+- **CSR (Client-Side Rendering)** — [SSR](frontend-react/ssr.md#csr-vs-ssr)
 - **CSSOM** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
+- **Custom hook (React)** — [Hooks](frontend-react/hooks.md#custom-hooks)
 - **Dockerización** — [Dockerización](devops/docker.md#1-por-qué-dockerizar)
 
 ### D
@@ -50,8 +57,10 @@
 - **Debounce / Throttle** — [Diagnóstico Frontend](diagnostico/frontend.md#manejo-incorrecto-de-eventos)
 - **Decorator (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#decorator)
 - **Deep copy** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#shallow-copy-vs-deep-copy)
+- **Delegación de eventos** — [Eventos DOM](frontend-react/eventos-dom.md#delegación-de-eventos)
 - **Denormalización** — [Normalización](sql/normalizacion.md#denormalización-el-trade-off)
 - **Dependency Inversion Principle (D de SOLID)** — [SOLID principles](system-design/solid.md#d--dependency-inversion-principle)
+- **Depends (FastAPI)** — [Endpoints para microservicios](python/endpoints-microservicios.md#4-dependency-injection-con-depends)
 - **Dirty read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
 - **Disponibilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
 - **DNS (Domain Name System)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#2-resolución-dns--de-dominio-a-ip)
@@ -72,6 +81,7 @@
 
 ### F
 
+- **f-strings (Python)** — [Sintaxis general](python/sintaxis.md#f-strings--interpolación-de-strings)
 - **Facade (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#facade)
 - **Factory Method** — [Patrones creacionales](system-design/patrones-creacionales.md#factory-method)
 - **Forward-only migration** — [Migraciones de base de datos](sql/migraciones.md#2-forward-only-vs-reversible)
@@ -84,6 +94,8 @@
 ### H
 
 - **Hashing** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
+- **Hidratación (Hydration)** — [SSR](frontend-react/ssr.md#hidratación)
+- **Hooks (React)** — [Hooks](frontend-react/hooks.md)
 - **HPA (Horizontal Pod Autoscaler)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
 - **HTTP chaining** — [Diagnóstico Backend](diagnostico/backend.md#http-chaining)
 
@@ -95,6 +107,7 @@
 - **Índice parcial** — [Índices](sql/indices.md#índice-parcial-postgres)
 - **Inmutabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#inmutabilidad)
 - **Interface Segregation Principle (I de SOLID)** — [SOLID principles](system-design/solid.md#i--interface-segregation-principle)
+- **IntersectionObserver (Browser API)** — [Patrón Observer en el browser](frontend-react/observer-en-el-browser.md#intersectionobserver)
 - **Isolation levels** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#isolation-levels-sql-standard)
 
 ### J
@@ -103,17 +116,24 @@
 
 ### K
 
+- **key (prop de listas, React)** — [Diagnóstico Frontend](diagnostico/frontend.md#falta-de-key-en-listas)
 - **Key-Value store** — [NoSQL](sql/nosql.md#categorías-principales)
 
 ### L
 
 - **Liskov Substitution Principle (L de SOLID)** — [SOLID principles](system-design/solid.md#l--liskov-substitution-principle)
+- **List comprehension (Python)** — [Sintaxis general](python/sintaxis.md#comprehensions)
 
 ### M
 
+- **memo / useMemo / useCallback (React)** — [Diagnóstico Frontend](diagnostico/frontend.md#componentes-que-no-usan-memousememousecallback)
+- **Micro-frontends** — [Module Federation](frontend-react/module-federation.md#el-problema-que-resuelve)
 - **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md#1-versionado-de-schema)
 - **Mock** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
-- **Multi-stage build** — [Dockerización](devops/docker.md#2-multi-stage-build)
+- **Module Federation** — [Module Federation](frontend-react/module-federation.md)
+- **moto (Python)** — [Testing en FastAPI](python/testing-fastapi.md#4-mockear-servicios-externos)
+- **Multi-stage build (Docker)** — [Dockerización](devops/docker.md#2-multi-stage-build)
+- **MutationObserver (Browser API)** — [Patrón Observer en el browser](frontend-react/observer-en-el-browser.md#mutationobserver)
 - **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md#mvcc-multi-version-concurrency-control)
 
 ### N
@@ -126,6 +146,8 @@
 
 ### O
 
+- **OAuth2PasswordBearer (FastAPI)** — [Autenticación en FastAPI](python/autenticacion-fastapi.md#5-proteger-rutas-con-oauth2passwordbearer--depends)
+- **Object Pooling** — [Object Pooling](frontend-react/object-pooling.md)
 - **Observabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Observer (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#observer)
 - **OLAP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
@@ -140,14 +162,18 @@
 - **Pessimistic locking** — [Locks](sql/locks.md#pessimistic-vs-optimistic-locking)
 - **Phantom read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
 - **Proxy (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#proxy)
+- **Pydantic (BaseModel, Python)** — [Endpoints para microservicios](python/endpoints-microservicios.md#3-validación-de-entrada-con-pydantic)
+- **pyenv (Python)** — [Setup en macOS — flujo clásico](python/setup-macos.md#2-pyenv--manejo-de-versiones-de-python)
+- **pytest (fixtures / conftest.py, Python)** — [Testing en FastAPI](python/testing-fastapi.md#1-pytest-fixtures-y-conftestpy)
 
 ### R
 
 - **Range partitioning** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#range-partitioning)
-- **Readiness probe** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
+- **Readiness probe (Kubernetes)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
 - **Refresh token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)
 - **Render tree** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
-- **Resource limits (requests vs limits)** — [Kubernetes](devops/kubernetes.md#resource-limits)
+- **ResizeObserver (Browser API)** — [Patrón Observer en el browser](frontend-react/observer-en-el-browser.md#resizeobserver)
+- **Resource limits (requests vs limits, Kubernetes)** — [Kubernetes](devops/kubernetes.md#resource-limits)
 - **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md#rollback)
 
 ### S
@@ -162,6 +188,9 @@
 - **Single Responsibility Principle (S de SOLID)** — [SOLID principles](system-design/solid.md#s--single-responsibility-principle)
 - **Singleton (patrón)** — [Patrones creacionales](system-design/patrones-creacionales.md#singleton)
 - **SOLID** — [SOLID principles](system-design/solid.md)
+- **SSE (Server-Sent Events)** — [WebSocket / SSE / Streaming](frontend-react/websocket-sse-streaming.md#sse-server-sent-events--unidireccional)
+- **SSG (Static Site Generation)** — [SSR](frontend-react/ssr.md#ssg-la-variante-prima)
+- **SSR (Server-Side Rendering)** — [SSR](frontend-react/ssr.md)
 - **Stored Procedure** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 - **Strategy (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#strategy)
 - **Stub** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
@@ -171,15 +200,24 @@
 - **TCP handshake (three-way handshake)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#3-conexión-tcp--three-way-handshake)
 - **Test doubles (Mock/Stub/Fake/Spy)** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
 - **Test pyramid** — [Testing — conceptos generales](system-design/testing.md#1-test-pyramid)
+- **TestClient (FastAPI)** — [Endpoints para microservicios](python/endpoints-microservicios.md#8-testing-de-endpoints-con-testclient)
 - **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#4-tls-handshake-si-es-https)
 - **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
 - **Transactional rollback pattern** — [Testing — conceptos generales](system-design/testing.md#5-transactional-rollback-pattern-para-tests-de-db)
+- **Tree shaking** — [Tree Shaking](frontend-react/tree-shaking.md)
+
+### U
+
+- **useEffect (React)** — [Diagnóstico Frontend](diagnostico/frontend.md#useeffect-mal-usado--re-renders-en-cadena)
+- **uv (Python)** — [Setup en macOS con uv](python/setup-uv.md)
 
 ### V
 
+- **venv (Python)** — [Setup en macOS — flujo clásico](python/setup-macos.md#3-venv--entornos-virtuales)
 - **Virtualización / Windowing** — [Diagnóstico Frontend](diagnostico/frontend.md#falta-de-paginación--virtualización)
 - **Vistas materializadas** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#vistas-materializadas)
 
 ### W
 
-- **Web Worker** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
+- **Web Worker (Browser API)** — [Diagnóstico Frontend](diagnostico/frontend.md#bloqueo-del-hilo-principal)
+- **WebSocket** — [WebSocket / SSE / Streaming](frontend-react/websocket-sse-streaming.md#websocket--bidireccional)
