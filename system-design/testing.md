@@ -95,5 +95,28 @@ describe('OrderService', () => {
 
 Ver la implementación equivalente en pytest (fixtures + `scope`) en [Testing en FastAPI](../python/testing-fastapi.md#9-hooks-de-setupteardown-en-pytest-scope-de-las-fixtures).
 
+## 7. Tests frágiles vs tests robustos
+
+No es una dicotomía formal con nombre propio como "Mock vs Stub" — es más una consecuencia directa de **qué** se testea. Un test frágil (*brittle*) verifica **detalles de implementación**: se rompe con cualquier refactor interno, aunque el comportamiento externo siga siendo correcto. Un test robusto (*resilient*) verifica **comportamiento observable** (el resultado, el contrato) — sobrevive a refactors porque no le importa *cómo* se llegó al resultado, solo *que* sea el correcto.
+
+```python
+# ❌ frágil: testea implementación — se rompe si cambia el orden interno de llamadas,
+# aunque el resultado final (el descuento aplicado) siga siendo correcto
+def test_apply_discount_calls_repo_in_order(mocker):
+    repo = mocker.Mock()
+    service = OrderService(repo)
+    service.apply_discount(1, 10)
+    assert repo.method_calls == [call.find_by_id(1), call.save(ANY)]  # detalle interno, no comportamiento
+
+# ✅ robusto: testea comportamiento — no le importa cómo se calculó el resultado
+def test_apply_discount_reduces_total():
+    repo = FakeOrderRepository({1: Order(id=1, status="pending", total=100)})
+    service = OrderService(repo)
+    order = service.apply_discount(1, 10)
+    assert order.total == 90  # el resultado observable, sin importar el camino interno
+```
+
+Es la máxima de "testear comportamiento, no implementación" (popularizada por Kent C. Dodds): si un refactor que no cambia ningún resultado observable rompe un test, ese test estaba acoplado a la implementación, no al contrato.
+
 ---
 Relacionado: [Testing en FastAPI](../python/testing-fastapi.md), [ACID / transacciones / isolation levels](../sql/acid-transacciones-isolation.md) (transacciones y rollback), [Idempotencia](atributos-de-calidad.md).

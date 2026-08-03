@@ -215,6 +215,8 @@
 - **Test doubles (Mock/Stub/Fake/Spy)** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
 - **Test pyramid** — [Testing — conceptos generales](system-design/testing.md#1-test-pyramid)
 - **TestClient (FastAPI)** — [Endpoints para microservicios](python/endpoints-microservicios.md#8-testing-de-endpoints-con-testclient)
+- **Tests frágiles (brittle tests)** — [Testing — conceptos generales](system-design/testing.md#7-tests-frágiles-vs-tests-robustos)
+- **Tests robustos (resilient tests)** — [Testing — conceptos generales](system-design/testing.md#7-tests-frágiles-vs-tests-robustos)
 - **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#4-tls-handshake-si-es-https)
 - **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
 - **Topic (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#topics-y-particiones)
