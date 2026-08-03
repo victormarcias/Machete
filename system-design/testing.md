@@ -67,5 +67,33 @@ def run_test_in_transaction(test_fn):
 
 Esto es lo que hace que un test suite con cientos de tests de integración contra una DB real siga corriendo en segundos en vez de minutos.
 
+## 6. Hooks de setup/teardown — `beforeEach`, `afterEach`, `beforeAll`, `afterAll`
+
+La mayoría de los frameworks de testing (Jest, Mocha, Vitest, JUnit, RSpec) ofrecen cuatro hooks para código que corre alrededor de los tests, no como parte de ellos:
+
+- **`beforeEach`**: corre antes de **cada** test del bloque — el lugar típico para resetear estado (crear un objeto fresco, limpiar una DB de test).
+- **`afterEach`**: corre después de **cada** test — cleanup puntual.
+- **`beforeAll`**: corre **una sola vez**, antes del primer test del bloque — para setup costoso y compartible (levantar un servidor de test, abrir una conexión).
+- **`afterAll`**: corre **una sola vez**, después del último test — cleanup final de lo que abrió `beforeAll`.
+
+```js
+describe('OrderService', () => {
+  let db;
+
+  beforeAll(async () => { db = await connectTestDb(); });  // una vez, antes de todos los tests
+  afterAll(async () => { await db.close(); });               // una vez, al final
+
+  beforeEach(async () => { await db.clear(); });              // antes de CADA test — aislamiento
+  afterEach(() => { jest.clearAllMocks(); });                  // después de cada test
+
+  test('crea una orden', async () => { /* ... */ });
+  test('rechaza una orden sin items', async () => { /* ... */ });
+});
+```
+
+**Por qué importa el "una vez" vs "cada vez"**: usar `beforeAll` para algo que debería resetearse por test rompe el [aislamiento de tests](#4-aislamiento-de-tests) del punto 4 — si un test muta un estado que `beforeAll` solo creó una vez, el siguiente test hereda esa mutación sin declararlo como dependencia. Regla práctica: `beforeAll`/`afterAll` para setup caro y realmente compartible; `beforeEach`/`afterEach` para todo lo que necesita empezar limpio en cada test.
+
+Ver la implementación equivalente en pytest (fixtures + `scope`) en [Testing en FastAPI](../python/testing-fastapi.md#9-hooks-de-setupteardown-en-pytest-scope-de-las-fixtures).
+
 ---
 Relacionado: [Testing en FastAPI](../python/testing-fastapi.md), [ACID / transacciones / isolation levels](../sql/acid-transacciones-isolation.md) (transacciones y rollback), [Idempotencia](atributos-de-calidad.md).
