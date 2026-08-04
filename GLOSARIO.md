@@ -180,6 +180,7 @@
 
 ### R
 
+- **Race condition** — [Locks](sql/locks.md#race-condition--el-problema-de-fondo)
 - **Range partitioning** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#range-partitioning)
 - **Readiness probe (Kubernetes)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#disponibilidad)
 - **Refresh token** — [Autenticación y Seguridad](system-design/autenticacion.md#6-access-token-vs-refresh-token)

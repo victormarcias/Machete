@@ -2,6 +2,24 @@
 
 Mecanismos de control de concurrencia: cómo la base evita que transacciones simultáneas se pisen los datos.
 
+## Race condition — el problema de fondo
+
+Ocurre cuando dos o más operaciones acceden al mismo dato compartido al mismo tiempo, y el resultado final depende del **orden/timing** exacto en que se intercalan — sin ninguna garantía de cuál va a ganar. El caso clásico es el *lost update*: dos requests leen el mismo valor, cada uno calcula su cambio sobre esa lectura, y el que escribe segundo **pisa** el cambio del primero sin enterarse de que existió.
+
+```sql
+-- T1 y T2 corren "al mismo tiempo", ambos arrancan leyendo el mismo stock
+-- T1: SELECT stock FROM products WHERE id = 1;  → lee 5
+-- T2: SELECT stock FROM products WHERE id = 1;  → lee 5 (todavía no vio el cambio de T1)
+
+-- T1: UPDATE products SET stock = 4 WHERE id = 1;  -- 5 - 1, basado en lo que leyó
+-- T2: UPDATE products SET stock = 4 WHERE id = 1;  -- 5 - 1, basado en lo que leyó
+
+-- resultado: stock = 4, pero deberían haberse vendido 2 unidades → stock real = 3
+-- el UPDATE de T2 pisó el de T1 sin que ninguno de los dos se enterara del otro
+```
+
+Todo lo que sigue en este archivo (locks, MVCC) son las distintas formas de evitar este escenario: o se bloquea el acceso concurrente al dato (pessimistic locking, shared/exclusive locks), o se detecta el conflicto al momento de escribir y se rechaza la escritura pisada (optimistic locking).
+
 ## Pessimistic vs Optimistic locking
 
 - **Pessimistic**: asumo que va a haber conflicto, así que bloqueo el recurso antes de tocarlo (`SELECT ... FOR UPDATE`). Otros procesos esperan.
