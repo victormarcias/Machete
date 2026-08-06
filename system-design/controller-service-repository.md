@@ -36,6 +36,34 @@ async def apply_discount(order_id: int, body: DiscountBody):
     return {"id": order.id, "total": order.total}
 ```
 
+## DTO (Data Transfer Object)
+
+Un objeto simple, sin lógica de negocio, que solo transporta datos entre capas o entre sistemas — nada de métodos con comportamiento, solo campos. En el Controller de arriba, `DiscountBody` (lo que entra) y el `dict` de la response (lo que sale) son DTOs: **desacoplan el contrato externo de la API del modelo de dominio interno** que usa el Service.
+
+Por qué importa:
+- Cambiar el schema de la DB (agregar una columna interna, renombrar un campo) no debería romper el contrato de la API si hay un DTO en el medio traduciendo.
+- El DTO de salida controla exactamente qué se expone — nunca se filtra un campo interno (`password_hash`, `internal_risk_score`) solo porque el modelo de dominio lo tiene.
+- El mismo dominio puede tener DTOs distintos para casos de uso distintos (un resumen liviano para un listado, uno completo para el detalle) sin duplicar el modelo de dominio en sí.
+
+```python
+# Modelo de dominio: tiene todo lo que el negocio necesita, incluso campos internos
+class Order:
+    def __init__(self, id, total, status, internal_risk_score, user_id):
+        ...
+
+# DTO de salida: solo lo que el cliente de la API necesita ver
+class OrderDTO(BaseModel):
+    id: int
+    total: float
+    status: str
+    # internal_risk_score NUNCA aparece acá — el DTO decide qué se expone
+
+def order_to_dto(order: Order) -> OrderDTO:
+    return OrderDTO(id=order.id, total=order.total, status=order.status)
+```
+
+Ya lo venías usando sin el nombre: el `response_model` y el modelo del body en [Endpoints para microservicios](../python/endpoints-microservicios.md#1-anatomía-de-un-endpoint-en-fastapi) son DTOs de salida y de entrada respectivamente — un modelo de Pydantic que separa el shape de la API del modelo de dominio interno.
+
 ## Por qué separar
 
 Cada capa tiene una sola razón para cambiar — es [Single Responsibility](solid.md#s--single-responsibility-principle) aplicado a la arquitectura de una request completa: un cambio en el formato de la API toca solo el Controller, un cambio en la regla de negocio toca solo el Service, un cambio de Postgres a Mongo toca solo el Repository.
@@ -58,4 +86,4 @@ def test_apply_discount_rejects_non_pending_order():
 ```
 
 ---
-Relacionado: [SOLID principles](solid.md), [Testing — conceptos generales](testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy) (el `FakeOrderRepository` de arriba es un Fake, no un Mock).
+Relacionado: [SOLID principles](solid.md), [Testing — conceptos generales](testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy) (el `FakeOrderRepository` de arriba es un Fake, no un Mock), [Endpoints para microservicios](../python/endpoints-microservicios.md) (`response_model` y Pydantic como DTOs en la práctica).

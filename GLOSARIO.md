@@ -75,6 +75,7 @@
 - **DNS (Domain Name System)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#2-resolución-dns--de-dominio-a-ip)
 - **Document store** — [NoSQL](sql/nosql.md#categorías-principales)
 - **DOM (Document Object Model)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
+- **DTO (Data Transfer Object)** — [Controller / Service / Repository](system-design/controller-service-repository.md#dto-data-transfer-object)
 - **Dual write** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
 
 ### E
