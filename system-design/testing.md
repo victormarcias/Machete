@@ -118,5 +118,32 @@ def test_apply_discount_reduces_total():
 
 Es la máxima de "testear comportamiento, no implementación" (popularizada por Kent C. Dodds): si un refactor que no cambia ningún resultado observable rompe un test, ese test estaba acoplado a la implementación, no al contrato.
 
+## 8. Caja negra vs caja blanca
+
+- **Caja negra (black box)**: testear el comportamiento externo sin mirar ni conocer la implementación interna — solo importa qué entra y qué sale, según el contrato/spec. El test se podría escribir sin haber leído una línea del código.
+- **Caja blanca (white box)**: testear conociendo la implementación interna — los casos se diseñan mirando el código: cada rama de un `if`, cada loop, cada camino posible, buscando cobertura de código completa.
+
+```python
+def calculate_shipping(weight, country):
+    if country == "AR":
+        return weight * 2 if weight > 10 else 10
+    return weight * 5
+
+# ✅ caja negra: los casos salen del contrato/spec, sin mirar el código —
+# "envío a Argentina cuesta esto, a otro país cuesta esto otro"
+def test_shipping_ar_light():
+    assert calculate_shipping(5, "AR") == 10
+
+def test_shipping_other_country():
+    assert calculate_shipping(5, "US") == 25
+
+# ✅ caja blanca: los casos salen de mirar las ramas del código —
+# hace falta ver el if/else para saber que weight > 10 en AR es un camino distinto
+def test_shipping_ar_heavy_branch():
+    assert calculate_shipping(15, "AR") == 30  # cubre la rama que la caja negra de arriba se salteó
+```
+
+**Trade-off**: caja negra es más robusta a refactors (no le importa cómo está hecho — ver el punto 7) y refleja mejor el contrato que le importa al usuario real. Caja blanca encuentra casos borde que el spec no contempló explícitamente (esa rama `weight > 10` capaz nadie la pidió, pero existe en el código y hay que cubrirla) — es la base de las métricas de *code coverage*. En la práctica, la mayoría de los tests de un equipo son caja negra a nivel de comportamiento, con caja blanca usada puntualmente para cazar ramas sin cubrir.
+
 ---
 Relacionado: [Testing en FastAPI](../python/testing-fastapi.md), [ACID / transacciones / isolation levels](../sql/acid-transacciones-isolation.md) (transacciones y rollback), [Idempotencia](atributos-de-calidad.md).

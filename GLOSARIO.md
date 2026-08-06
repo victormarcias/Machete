@@ -32,6 +32,8 @@
 
 - **Cache stampede (thundering herd)** — [Cache Invalidation](system-design/cache-invalidation.md#cache-stampede-thundering-herd)
 - **Cache-aside pattern** — [Diagnóstico Backend](diagnostico/backend.md#falta-de-cache)
+- **Caja blanca (white box testing)** — [Testing — conceptos generales](system-design/testing.md#8-caja-negra-vs-caja-blanca)
+- **Caja negra (black box testing)** — [Testing — conceptos generales](system-design/testing.md#8-caja-negra-vs-caja-blanca)
 - **CAP Theorem** — [NoSQL](sql/nosql.md#cap-theorem)
 - **Capturing (evento)** — [Eventos DOM](frontend-react/eventos-dom.md#bubbling-vs-capturing)
 - **CDN (Content Delivery Network)** — [CDN](devops/cdn.md)
