@@ -94,6 +94,7 @@
 - **f-strings (Python)** — [Sintaxis general](python/sintaxis.md#f-strings--interpolación-de-strings)
 - **Facade (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#facade)
 - **Factory Method** — [Patrones creacionales](system-design/patrones-creacionales.md#factory-method)
+- **Fixture (testing)** — [Testing — conceptos generales](system-design/testing.md#9-fixtures)
 - **Forward-only migration** — [Migraciones de base de datos](sql/migraciones.md#2-forward-only-vs-reversible)
 - **Función almacenada** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 

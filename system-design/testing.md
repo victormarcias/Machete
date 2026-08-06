@@ -145,5 +145,28 @@ def test_shipping_ar_heavy_branch():
 
 **Trade-off**: caja negra es más robusta a refactors (no le importa cómo está hecho — ver el punto 7) y refleja mejor el contrato que le importa al usuario real. Caja blanca encuentra casos borde que el spec no contempló explícitamente (esa rama `weight > 10` capaz nadie la pidió, pero existe en el código y hay que cubrirla) — es la base de las métricas de *code coverage*. En la práctica, la mayoría de los tests de un equipo son caja negra a nivel de comportamiento, con caja blanca usada puntualmente para cazar ramas sin cubrir.
 
+## 9. Fixtures
+
+Un **fixture** es el estado conocido y reproducible desde el que arranca un test — datos de prueba, un objeto ya construido, o el entorno ya preparado (una conexión, un usuario de prueba). La idea es que el test nunca dependa de "lo que haya quedado" de una corrida anterior: arranca siempre del mismo punto de partida, declarado explícitamente.
+
+Es el mecanismo concreto detrás de dos cosas ya vistas en este archivo:
+- Resuelve el [aislamiento de tests](#4-aislamiento-de-tests) del punto 4 — cada test recibe su propio estado fresco, en vez de heredar el de otro test.
+- Es una forma de implementar los [hooks de setup/teardown](#6-hooks-de-setupteardown--beforeeach-aftereach-beforeall-afterall) del punto 6 — en frameworks como pytest, un fixture directamente **reemplaza** a `beforeEach`/`beforeAll` (según su `scope`), en vez de coexistir como un mecanismo aparte.
+
+```
+# fixture como dato: un objeto de prueba ya armado, listo para usar
+fixture_user = { id: 1, email: 'test@mail.com', role: 'admin' }
+
+# fixture como función que provee ese estado, con su propio setup/teardown
+function userFixture() {
+  const user = createTestUser();
+  return { user, cleanup: () => deleteTestUser(user.id) };
+}
+```
+
+No todos los frameworks lo modelan igual: en pytest es una **función inyectable** (con setup/teardown propio vía `yield`); en muchos frameworks de JS es más común que sea **datos estáticos** (un archivo JSON/objeto de ejemplo) cargados al principio del test. La idea de fondo — estado conocido y reproducible — es la misma en los dos casos.
+
+Ver la implementación en pytest en [Testing en FastAPI](../python/testing-fastapi.md#1-pytest-fixtures-y-conftestpy).
+
 ---
 Relacionado: [Testing en FastAPI](../python/testing-fastapi.md), [ACID / transacciones / isolation levels](../sql/acid-transacciones-isolation.md) (transacciones y rollback), [Idempotencia](atributos-de-calidad.md).
