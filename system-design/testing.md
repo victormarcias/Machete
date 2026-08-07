@@ -168,5 +168,22 @@ No todos los frameworks lo modelan igual: en pytest es una **función inyectable
 
 Ver la implementación en pytest en [Testing en FastAPI](../python/testing-fastapi.md#1-pytest-fixtures-y-conftestpy).
 
+## 10. Ejecución de tests en paralelo vs serial
+
+Muchos test runners son capaces de repartir los tests entre varios workers/procesos para correr en **paralelo** y aprovechar los cores de la máquina — en algunos esto es opt-in (hay que pedirlo explícitamente), en otros es el default. Forzar lo contrario — correr todo **secuencialmente, en un solo proceso**, uno atrás del otro — sirve en dos casos típicos:
+
+- **Debuggear un test flaky** (un test que a veces pasa y a veces falla, **sin que el código haya cambiado** — la señal de que hay algo no determinístico de por medio, no un bug real en la lógica): si sospechás que es por [aislamiento de tests](#4-aislamiento-de-tests) roto (dos tests paralelos pisándose un recurso compartido — un puerto, un archivo, una fila de DB), correr serial aísla la variable: si el test deja de fallar, confirma que el problema era paralelismo/estado compartido, no el test en sí.
+- **CI con recursos limitados**: en un runner con pocos cores o poca memoria, levantar N workers en paralelo puede terminar siendo más lento (por contención) que correr todo serial, o directamente quedarse sin memoria.
+
+```python
+# pytest: serial es el default — el paralelismo es opt-in con el plugin pytest-xdist
+pytest              # serial, un test atrás del otro
+pytest -n auto      # paralelo, reparte entre workers — esto es lo que se "apaga" para volver a serial
+```
+
+Cada ecosistema nombra esto distinto (en Jest, JS, es el flag `--runInBand`) pero el concepto es el mismo en cualquier lenguaje: forzar un solo proceso para eliminar el paralelismo como variable.
+
+**La causa raíz real**: si correr serial "arregla" un test que fallaba en paralelo, el problema no es el paralelismo en sí — es que ese test no estaba realmente aislado, compartía estado con otro. Forzar serial es un diagnóstico/workaround para confirmar la sospecha, no la solución: el fix real es garantizar que cada test tenga su propio [fixture](#9-fixtures) sin nada compartido con los demás.
+
 ---
 Relacionado: [Testing en FastAPI](../python/testing-fastapi.md), [ACID / transacciones / isolation levels](../sql/acid-transacciones-isolation.md) (transacciones y rollback), [Idempotencia](atributos-de-calidad.md).

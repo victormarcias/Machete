@@ -80,6 +80,7 @@
 
 ### E
 
+- **Ejecución de tests en paralelo vs serial** — [Testing — conceptos generales](system-design/testing.md#10-ejecución-de-tests-en-paralelo-vs-serial)
 - **Elasticidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
 - **Encoding** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
 - **Encriptado** — [Autenticación y Seguridad](system-design/autenticacion.md#1-hashing-vs-encriptado-vs-encoding)
@@ -193,6 +194,7 @@
 - **Resource limits (requests vs limits, Kubernetes)** — [Kubernetes](devops/kubernetes.md#resource-limits)
 - **Rollback** — [Rollback / savepoints](sql/rollback-savepoints.md#rollback)
 - **Round robin** — [Load Balancers](system-design/load-balancers.md#algoritmos-de-balanceo)
+- **runInBand (Jest — equivalente a correr tests en serial)** — [Testing — conceptos generales](system-design/testing.md#10-ejecución-de-tests-en-paralelo-vs-serial)
 
 ### S
 
@@ -218,6 +220,7 @@
 
 - **TCP handshake (three-way handshake)** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#3-conexión-tcp--three-way-handshake)
 - **Test doubles (Mock/Stub/Fake/Spy)** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
+- **Test flaky** — [Testing — conceptos generales](system-design/testing.md#10-ejecución-de-tests-en-paralelo-vs-serial)
 - **Test pyramid** — [Testing — conceptos generales](system-design/testing.md#1-test-pyramid)
 - **TestClient (FastAPI)** — [Endpoints para microservicios](python/endpoints-microservicios.md#8-testing-de-endpoints-con-testclient)
 - **Tests frágiles (brittle tests)** — [Testing — conceptos generales](system-design/testing.md#7-tests-frágiles-vs-tests-robustos)
