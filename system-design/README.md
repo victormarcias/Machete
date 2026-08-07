@@ -7,6 +7,7 @@ Machetes sobre diseño de sistemas y arquitectura backend.
 - [x] [Autenticación y Seguridad — conceptos generales](autenticacion.md)
 - [x] [Cache invalidation](cache-invalidation.md)
 - [x] [Controller / Service / Repository](controller-service-repository.md)
+- [x] [HTTP Status Codes](http-status-codes.md)
 - [x] [Load balancers](load-balancers.md)
 - [x] [Patrones de diseño — Comportamiento](patrones-comportamiento.md)
 - [x] [Patrones de diseño — Creacionales](patrones-creacionales.md)

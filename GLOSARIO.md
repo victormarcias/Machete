@@ -21,6 +21,8 @@
 
 - **B-tree** — [Índices](sql/indices.md#tipos-más-comunes)
 - **Backfill** — [Migraciones de base de datos](sql/migraciones.md#4-expandcontract-pattern-zero-downtime)
+- **Bad Gateway (502)** — [HTTP Status Codes](system-design/http-status-codes.md#5xx--server-error)
+- **Bad Request (400)** — [HTTP Status Codes](system-design/http-status-codes.md#4xx--client-error)
 - **BCNF (Boyce-Codd)** — [Normalización](sql/normalizacion.md#bcnf--boyce-codd-35nf)
 - **beforeAll** — [Testing — conceptos generales](system-design/testing.md#6-hooks-de-setupteardown--beforeeach-aftereach-beforeall-afterall)
 - **beforeEach** — [Testing — conceptos generales](system-design/testing.md#6-hooks-de-setupteardown--beforeeach-aftereach-beforeall-afterall)
@@ -44,6 +46,7 @@
 - **Cold start** — [Cold starts](devops/cold-starts.md)
 - **Column-family store** — [NoSQL](sql/nosql.md#categorías-principales)
 - **Command (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#command)
+- **Conflict (409)** — [HTTP Status Codes](system-design/http-status-codes.md#4xx--client-error)
 - **Connection pooling** — [Diagnóstico Backend](diagnostico/backend.md#conexiones-mal-gestionadas)
 - **Consistencia** — [ACID](sql/acid-transacciones-isolation.md#acid) · [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#consistencia)
 - **Consistencia eventual** — [NoSQL](sql/nosql.md#consistencia-eventual)
@@ -54,6 +57,7 @@
 - **Core Web Vitals (LCP, INP, CLS)** — [Performance Diagnostics](frontend-react/performance-diagnostics.md#lighthouse-genérico)
 - **Correlation ID** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Covering index** — [Índices](sql/indices.md#covering-index)
+- **Created (201)** — [HTTP Status Codes](system-design/http-status-codes.md#2xx--success)
 - **CRUD** — [CRUD](sql/crud.md)
 - **CSR (Client-Side Rendering)** — [SSR](frontend-react/ssr.md#csr-vs-ssr)
 - **CSSOM** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#8-el-navegador-renderiza)
@@ -96,11 +100,14 @@
 - **Facade (patrón)** — [Patrones estructurales](system-design/patrones-estructurales.md#facade)
 - **Factory Method** — [Patrones creacionales](system-design/patrones-creacionales.md#factory-method)
 - **Fixture (testing)** — [Testing — conceptos generales](system-design/testing.md#9-fixtures)
+- **Forbidden (403)** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
 - **Forward-only migration** — [Migraciones de base de datos](sql/migraciones.md#2-forward-only-vs-reversible)
+- **Found (302)** — [HTTP Status Codes](system-design/http-status-codes.md#3xx--redirection)
 - **Función almacenada** — [Stored procedures vs funciones](sql/stored-procedures-vs-funciones.md)
 
 ### G
 
+- **Gateway Timeout (504)** — [HTTP Status Codes](system-design/http-status-codes.md#5xx--server-error)
 - **Graph database** — [NoSQL](sql/nosql.md#categorías-principales)
 
 ### H
@@ -110,6 +117,7 @@
 - **Hooks (React)** — [Hooks](frontend-react/hooks.md)
 - **HPA (Horizontal Pod Autoscaler)** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#elasticidad)
 - **HTTP chaining** — [Diagnóstico Backend](diagnostico/backend.md#http-chaining)
+- **HTTP Status Codes** — [HTTP Status Codes](system-design/http-status-codes.md)
 
 ### I
 
@@ -119,6 +127,7 @@
 - **Índice parcial** — [Índices](sql/indices.md#índice-parcial-postgres)
 - **Inmutabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#inmutabilidad)
 - **Interface Segregation Principle (I de SOLID)** — [SOLID principles](system-design/solid.md#i--interface-segregation-principle)
+- **Internal Server Error (500)** — [HTTP Status Codes](system-design/http-status-codes.md#5xx--server-error)
 - **IntersectionObserver (Browser API)** — [Patrón Observer en el browser](frontend-react/observer-en-el-browser.md#intersectionobserver)
 - **Isolation levels** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#isolation-levels-sql-standard)
 
@@ -142,11 +151,13 @@
 ### M
 
 - **memo / useMemo / useCallback (React)** — [Diagnóstico Frontend](diagnostico/frontend.md#componentes-que-no-usan-memousememousecallback)
+- **Method Not Allowed (405)** — [HTTP Status Codes](system-design/http-status-codes.md#4xx--client-error)
 - **Micro-frontends** — [Module Federation](frontend-react/module-federation.md#el-problema-que-resuelve)
 - **Migración de schema** — [Migraciones de base de datos](sql/migraciones.md#1-versionado-de-schema)
 - **Mock** — [Testing — conceptos generales](system-design/testing.md#2-test-doubles--mock-vs-stub-vs-fake-vs-spy)
 - **Module Federation** — [Module Federation](frontend-react/module-federation.md)
 - **moto (Python)** — [Testing en FastAPI](python/testing-fastapi.md#4-mockear-servicios-externos)
+- **Moved Permanently (301)** — [HTTP Status Codes](system-design/http-status-codes.md#3xx--redirection)
 - **Multi-stage build (Docker)** — [Dockerización](devops/docker.md#2-multi-stage-build)
 - **MutationObserver (Browser API)** — [Patrón Observer en el browser](frontend-react/observer-en-el-browser.md#mutationobserver)
 - **MVCC (Multi-Version Concurrency Control)** — [Locks](sql/locks.md#mvcc-multi-version-concurrency-control)
@@ -154,10 +165,13 @@
 ### N
 
 - **N+1 (problema)** — [Diagnóstico Backend](diagnostico/backend.md#problema-n1)
+- **No Content (204)** — [HTTP Status Codes](system-design/http-status-codes.md#2xx--success)
 - **Non-clustered index** — [Índices](sql/indices.md#clustered-vs-non-clustered)
 - **Non-repeatable read** — [ACID / isolation levels](sql/acid-transacciones-isolation.md#los-tres-phenomena-que-definen-los-isolation-levels)
 - **Normalización** — [Normalización](sql/normalizacion.md)
 - **NoSQL** — [NoSQL](sql/nosql.md)
+- **Not Found (404)** — [HTTP Status Codes](system-design/http-status-codes.md#4xx--client-error)
+- **Not Modified (304)** — [HTTP Status Codes](system-design/http-status-codes.md#3xx--redirection)
 
 ### O
 
@@ -166,6 +180,7 @@
 - **Observabilidad** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#observabilidad)
 - **Observer (patrón)** — [Patrones de comportamiento](system-design/patrones-comportamiento.md#observer)
 - **Offset (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#offset)
+- **OK (200)** — [HTTP Status Codes](system-design/http-status-codes.md#2xx--success)
 - **OLAP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
 - **OLTP** — [Diagnóstico Base de Datos](diagnostico/base-de-datos.md#cubos-olap)
 - **Open/Closed Principle (O de SOLID)** — [SOLID principles](system-design/solid.md#o--openclosed-principle)
@@ -202,6 +217,7 @@
 - **SARGable** — [Queries non-sargable](sql/queries-non-sargable.md)
 - **Savepoint** — [Rollback / savepoints](sql/rollback-savepoints.md#savepoints)
 - **Security headers** — [Deploy a Cloud Run](devops/deploy-cloud-run.md#5-security-headers-vía-middleware)
+- **Service Unavailable (503)** — [HTTP Status Codes](system-design/http-status-codes.md#5xx--server-error)
 - **Shallow copy** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#shallow-copy-vs-deep-copy)
 - **Sharding** — [Sharding vs partitioning](sql/sharding-vs-partitioning.md#sharding)
 - **Shared lock** — [Locks](sql/locks.md#shared-lock-s-vs-exclusive-lock-x)
@@ -227,6 +243,7 @@
 - **Tests robustos (resilient tests)** — [Testing — conceptos generales](system-design/testing.md#7-tests-frágiles-vs-tests-robustos)
 - **TLS handshake** — [Qué pasa cuando escribís una URL](system-design/que-pasa-cuando-escribis-una-url.md#4-tls-handshake-si-es-https)
 - **Tolerancia a fallos** — [Atributos de calidad de sistemas](system-design/atributos-de-calidad.md#tolerancia-a-fallos)
+- **Too Many Requests (429)** — [HTTP Status Codes](system-design/http-status-codes.md#4xx--client-error)
 - **Topic (Kafka)** — [Arquitectura Kafka](system-design/kafka.md#topics-y-particiones)
 - **Transactional rollback pattern** — [Testing — conceptos generales](system-design/testing.md#5-transactional-rollback-pattern-para-tests-de-db)
 - **Tree shaking** — [Tree Shaking](frontend-react/tree-shaking.md)
@@ -234,6 +251,8 @@
 
 ### U
 
+- **Unauthorized (401)** — [Autenticación y Seguridad](system-design/autenticacion.md#7-autenticación-vs-autorización)
+- **Unprocessable Entity (422)** — [HTTP Status Codes](system-design/http-status-codes.md#4xx--client-error)
 - **useEffect (React)** — [Diagnóstico Frontend](diagnostico/frontend.md#useeffect-mal-usado--re-renders-en-cadena)
 - **uv (Python)** — [Setup en macOS con uv](python/setup-uv.md)
 
