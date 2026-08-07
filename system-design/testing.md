@@ -69,31 +69,31 @@ Esto es lo que hace que un test suite con cientos de tests de integración contr
 
 ## 6. Hooks de setup/teardown — `beforeEach`, `afterEach`, `beforeAll`, `afterAll`
 
-La mayoría de los frameworks de testing (Jest, Mocha, Vitest, JUnit, RSpec) ofrecen cuatro hooks para código que corre alrededor de los tests, no como parte de ellos:
+La mayoría de los frameworks de testing ofrecen cuatro momentos distintos para código que corre **alrededor** de los tests, no como parte de ellos (se sobreentiende que estos nombres son de JS — Jest/Mocha/Vitest —, pero el concepto se repite en pytest, JUnit, RSpec, etc. con otra sintaxis):
 
 - **`beforeEach`**: corre antes de **cada** test del bloque — el lugar típico para resetear estado (crear un objeto fresco, limpiar una DB de test).
 - **`afterEach`**: corre después de **cada** test — cleanup puntual.
 - **`beforeAll`**: corre **una sola vez**, antes del primer test del bloque — para setup costoso y compartible (levantar un servidor de test, abrir una conexión).
-- **`afterAll`**: corre **una sola vez**, después del último test — cleanup final de lo que abrió `beforeAll`.
+- **`afterAll`**: corre **una sola vez**, después del último test — cleanup final de lo que se abrió al principio.
 
-```js
-describe('OrderService', () => {
-  let db;
+```python
+# equivalente conceptual en Python — la sintaxis exacta varía según el framework
+def before_all():       # equivalente a beforeAll — una sola vez, antes de todos los tests del bloque
+    return connect_test_db()
 
-  beforeAll(async () => { db = await connectTestDb(); });  // una vez, antes de todos los tests
-  afterAll(async () => { await db.close(); });               // una vez, al final
+def after_all(db):       # equivalente a afterAll — una sola vez, al final
+    db.close()
 
-  beforeEach(async () => { await db.clear(); });              // antes de CADA test — aislamiento
-  afterEach(() => { jest.clearAllMocks(); });                  // después de cada test
+def before_each(db):     # equivalente a beforeEach — antes de CADA test, clave para el aislamiento
+    db.clear()
 
-  test('crea una orden', async () => { /* ... */ });
-  test('rechaza una orden sin items', async () => { /* ... */ });
-});
+def after_each():        # equivalente a afterEach — después de cada test
+    reset_mocks()
 ```
 
-**Por qué importa el "una vez" vs "cada vez"**: usar `beforeAll` para algo que debería resetearse por test rompe el [aislamiento de tests](#4-aislamiento-de-tests) del punto 4 — si un test muta un estado que `beforeAll` solo creó una vez, el siguiente test hereda esa mutación sin declararlo como dependencia. Regla práctica: `beforeAll`/`afterAll` para setup caro y realmente compartible; `beforeEach`/`afterEach` para todo lo que necesita empezar limpio en cada test.
+**Por qué importa el "una vez" vs "cada vez"**: usar `beforeAll` para algo que debería resetearse por test rompe el [aislamiento de tests](#4-aislamiento-de-tests) del punto 4 — si un test muta un estado que `beforeAll` solo creó una vez, el siguiente test hereda esa mutación sin declararlo como dependencia. Regla práctica: `beforeAll`/`afterAll` para trabajo caro y realmente compartible; `beforeEach`/`afterEach` para todo lo que necesita empezar limpio en cada test.
 
-Ver la implementación equivalente en pytest (fixtures + `scope`) en [Testing en FastAPI](../python/testing-fastapi.md#9-hooks-de-setupteardown-en-pytest-scope-de-las-fixtures).
+pytest no tiene estas cuatro funciones como tal — resuelve lo mismo con el parámetro `scope` de una fixture (ver la implementación completa en [Testing en FastAPI](../python/testing-fastapi.md#9-hooks-de-setupteardown-en-pytest-scope-de-las-fixtures)).
 
 ## 7. Tests frágiles vs tests robustos
 
@@ -151,17 +151,19 @@ Un **fixture** es el estado conocido y reproducible desde el que arranca un test
 
 Es el mecanismo concreto detrás de dos cosas ya vistas en este archivo:
 - Resuelve el [aislamiento de tests](#4-aislamiento-de-tests) del punto 4 — cada test recibe su propio estado fresco, en vez de heredar el de otro test.
-- Es una forma de implementar los [hooks de setup/teardown](#6-hooks-de-setupteardown--beforeeach-aftereach-beforeall-afterall) del punto 6 — en frameworks como pytest, un fixture directamente **reemplaza** a `beforeEach`/`beforeAll` (según su `scope`), en vez de coexistir como un mecanismo aparte.
+- Es una forma de implementar los [hooks de setup/teardown](#6-hooks-de-setupteardown--beforeeach-aftereach-beforeall-afterall) del punto 6 — en frameworks como pytest, un fixture directamente **reemplaza** a esos hooks (según su `scope`), en vez de coexistir como un mecanismo aparte.
 
-```
+```python
 # fixture como dato: un objeto de prueba ya armado, listo para usar
-fixture_user = { id: 1, email: 'test@mail.com', role: 'admin' }
+fixture_user = {"id": 1, "email": "test@mail.com", "role": "admin"}
 
 # fixture como función que provee ese estado, con su propio setup/teardown
-function userFixture() {
-  const user = createTestUser();
-  return { user, cleanup: () => deleteTestUser(user.id) };
-}
+def user_fixture():
+    user = create_test_user()
+    try:
+        yield user
+    finally:
+        delete_test_user(user.id)
 ```
 
 No todos los frameworks lo modelan igual: en pytest es una **función inyectable** (con setup/teardown propio vía `yield`); en muchos frameworks de JS es más común que sea **datos estáticos** (un archivo JSON/objeto de ejemplo) cargados al principio del test. La idea de fondo — estado conocido y reproducible — es la misma en los dos casos.
